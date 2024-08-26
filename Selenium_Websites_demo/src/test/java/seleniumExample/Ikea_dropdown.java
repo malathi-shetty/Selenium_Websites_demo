@@ -9,13 +9,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 
 public class Ikea_dropdown {
 
-	public static void main(String[] args) throws InterruptedException {
+	//public static void main(String[] args) throws InterruptedException {
 
+		 @Test
+		 @Description("This is a description of the test.") 
+		 @Step("Step one description")
+		    public void testMethod() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 
