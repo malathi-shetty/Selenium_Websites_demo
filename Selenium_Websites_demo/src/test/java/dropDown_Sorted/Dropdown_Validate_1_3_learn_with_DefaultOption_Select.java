@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Dropdown_Validate_1_3_learn {
+public class Dropdown_Validate_1_3_learn_with_DefaultOption_Select {
 	// Tried Assert.assertEquals
 
 	public static void main(String[] args) throws InterruptedException {

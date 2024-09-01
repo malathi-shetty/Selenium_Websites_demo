@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Dropdown_Validate {
+public class Dropdown_Validate_withOut_DefaultOption_Select_learn {
 
 	public static void main(String[] args) {
 	//	 String[] expectedOptions = {"Option1", "Option2", "Option3"}; - Select is not added
