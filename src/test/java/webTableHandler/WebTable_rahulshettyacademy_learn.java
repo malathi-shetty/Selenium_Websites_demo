@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class WebTable_learn {
+public class WebTable_rahulshettyacademy_learn {
 
 	public static void main(String[] args) {
 
