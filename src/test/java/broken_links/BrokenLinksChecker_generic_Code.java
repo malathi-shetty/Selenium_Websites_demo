@@ -2,6 +2,7 @@ package broken_links;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -22,8 +23,15 @@ public class BrokenLinksChecker_generic_Code {
 		driver.manage().window().maximize();
 	
 		 List<WebElement> links = driver.findElements(By.tagName("a"));
+		 List<String> linkAddress = new ArrayList<>();
+		 for (WebElement totallinks : links) {
+				linkAddress.add(totallinks.getAttribute("href"));
+			}
+		 System.out.println("total links are: " + linkAddress.size());
+		 
 	        for (WebElement link : links) {
 	            String url = link.getAttribute("href");
+	        	
 	            if (url != null && !url.isEmpty()) {
 	                try {
 	                    HttpURLConnection connection = (HttpURLConnection) (new URL(url).openConnection());
@@ -31,9 +39,9 @@ public class BrokenLinksChecker_generic_Code {
 	                    connection.connect();
 	                    int respCode = connection.getResponseCode();
 	                    if (respCode >= 400) {
-	                        System.out.println(url + " is a broken link.");
+	                        System.out.println(url +  " : " + connection.getResponseCode() + " is a broken link.");
 	                    } else {
-	                        System.out.println(url + " is a valid link.");
+	                        System.out.println(url +  " : " + connection.getResponseCode() + " is a valid link.");
 	                    }
 	                } catch (Exception e) {
 	                	  System.out.println("Error checking link: " + url);
@@ -42,6 +50,8 @@ public class BrokenLinksChecker_generic_Code {
 	                }
 	            }
 	        }
+	        
+	        driver.quit();
 	}
 }
 
