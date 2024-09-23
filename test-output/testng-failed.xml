@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automatePDFFile.Automate_PDF_File">
+      <class name="chrome_Options.Chrome_Options">
         <methods>
-          <include name="setUp"/>
-          <include name="pdfAutomateTesting"/>
           <include name="tearDown"/>
+          <include name="testSetWindowSize"/>
+          <include name="setup"/>
+          <include name="testSetUserAgent"/>
         </methods>
-      </class> <!-- automatePDFFile.Automate_PDF_File -->
+      </class> <!-- chrome_Options.Chrome_Options -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
