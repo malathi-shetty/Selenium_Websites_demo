@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chrome_Options.Chrome_Options">
+      <class name="autoHealing_Test.AutoHealing_Test">
         <methods>
-          <include name="tearDown"/>
-          <include name="testSetWindowSize"/>
+          <include name="teardown"/>
+          <include name="autoHealingTest"/>
           <include name="setup"/>
-          <include name="testSetUserAgent"/>
         </methods>
-      </class> <!-- chrome_Options.Chrome_Options -->
+      </class> <!-- autoHealing_Test.AutoHealing_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
