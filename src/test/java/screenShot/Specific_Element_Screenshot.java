@@ -26,7 +26,7 @@ public class Specific_Element_Screenshot {
 		WebElement logo = driver.findElement(By.xpath("//header[@id='main_header_new']//descendant::img[@alt='redBus']"));
 		TakesScreenshot ts = (TakesScreenshot)driver; // Typecasting TakeScreenshot interface with WebDriver
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File(".//Screenshot//redBusLogo.png");
+		File dest = new File(".//Screenshot//ElementLevel_redBusLogo.png");
 		FileUtils.copyFile(src, dest);
 		
 		driver.quit();
